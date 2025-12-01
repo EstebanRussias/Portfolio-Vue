@@ -1,0 +1,59 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "Portfolio V1",
+      "description": "Site portfolio construit en HTML/CSS/JS.",
+      "image": "https://picsum.photos/seed/portfolio1/800/450",
+      "github": "https://github.com/EstebanRussias/portfolio-v1",
+      "year": 2024,
+      "tags": ["HTML","CSS","JS"]
+    },
+    {
+      "id": 2,
+      "title": "Todo App",
+      "description": "Petite application de gestion de tâches avec stockage local.",
+      "image": "https://picsum.photos/seed/todo/800/450",
+      "github": "https://github.com/EstebanRussias/todo-app",
+      "year": 2025,
+      "tags": ["JavaScript","LocalStorage"]
+    },
+    {
+      "id": 3,
+      "title": "API Weather",
+      "description": "Consommation d'API météo et affichage dynamique.",
+      "image": "https://picsum.photos/seed/weather/800/450",
+      "github": "https://github.com/EstebanRussias/weather-api-client",
+      "year": 2023,
+      "tags": ["API","Fetch"]
+    },
+    {
+      "id": 4,
+      "title": "E-commerce UI",
+      "description": "Maquette UI pour une boutique en ligne.",
+      "image": "https://picsum.photos/seed/shop/800/450",
+      "github": "https://github.com/EstebanRussias/ecommerce-ui",
+      "year": 2024,
+      "tags": ["UI","Design"]
+    },
+    {
+      "id": 5,
+      "title": "Chat Simple",
+      "description": "Chat temps réel basique (WebSocket mock).",
+      "image": "https://picsum.photos/seed/chat/800/450",
+      "github": "https://github.com/EstebanRussias/simple-chat",
+      "year": 2022,
+      "tags": ["WebSocket","Realtime"]
+    },
+    {
+      "id": 6,
+      "title": "Blog Markdown",
+      "description": "Générateur de pages à partir de fichiers Markdown.",
+      "image": "https://picsum.photos/seed/blog/800/450",
+      "github": "https://github.com/EstebanRussias/markdown-blog",
+      "year": 2021,
+      "tags": ["Node","Markdown"]
+    }
+  ],
+  "competences":["HTML","CSS","JavaScript","Node", "PHP", "MySQL"]
+}
