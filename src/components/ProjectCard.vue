@@ -1,12 +1,11 @@
 <template>
-  <article class="card">
-    <img :src="project.image" :alt="project.title" class="card-img" />
-    <div class="card-body">
-      <h3>{{ project.title }}</h3>
-      <p class="meta">{{ project.year }} • {{ project.tags.join(' · ') }}</p>
-      <div class="card-actions">
-        <router-link :to="`/projects/${project.id}`" class="btn small">Voir</router-link>
-        <a v-if="project.github" :href="project.github" target="_blank" rel="noopener" class="btn small ghost">Github</a>
+  <article class="flex flex-col gap-4  bg-(--color-primary-light) rounded-lg overflow-hidden hover:bg-(--color-secondary)">
+    <img :src="project.image" :alt="project.title" class="w-full h-45object-cover" />
+    <div class="p-4 flex flex-col gap-2">
+      <h3 class="text-xl font-semibold">{{ project.title }}</h3>
+      <p class="text-slate-500 text-sm">{{ project.year }} • {{ project.tags.join(' · ') }}</p>
+      <div>
+        <router-link :to="`/projects/${project.id}`" class="px-3 py-1 text-sm bg-(--color-primary-light) border border-(--color-secondary) text-white rounded hover:bg-(--color-secondary-dark)">Voir</router-link>
       </div>
     </div>
   </article>
@@ -16,11 +15,4 @@
 defineProps({ project: { type: Object, required: true } })
 </script>
 
-<style>
-.card { display:flex; gap:1rem; border:1px solid #e6eef8; border-radius:8px; overflow:hidden; }
-.card-img { width:220px; height:140px; object-fit:cover; }
-.card-body { padding:1rem; flex:1; }
-.meta { color:#6b7280; font-size:0.9rem; }
-.btn.small { padding:0.35rem 0.6rem; font-size:0.85rem; }
-.btn.ghost { background:transparent; border:1px solid #0f172a; color:#0f172a; }
-</style>
+<!-- styles removed: using Tailwind utilities -->

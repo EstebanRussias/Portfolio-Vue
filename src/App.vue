@@ -1,7 +1,7 @@
 <template>
-  <div id="app">
+  <div id="app" class="min-h-screen flex flex-col bg-(--color-primary)">
     <Header />
-    <main class="container">
+    <main class="color-white">
       <router-view />
     </main>
     <Footer />
@@ -13,8 +13,3 @@ import Header from './components/Header.vue'
 import Footer from './components/Footer.vue'
 </script>
 
-<style>
-/* simple layout */
-#app { display:flex; flex-direction:column; min-height:100vh; }
-main.container { flex:1; padding:2rem; max-width:1100px; margin:0 auto; }
-</style>

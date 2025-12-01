@@ -36,3 +36,21 @@ npm run dev
 ```sh
 npm run build
 ```
+
+## Couleurs Tailwind personnalisées
+
+Ce projet utilise Tailwind CSS et contient trois couleurs personnalisées exposées dans `tailwind.config.cjs` :
+
+- `primary` (par défaut `#4f46e5`)
+- `secondary` (par défaut `#0ea5e9`)
+- `success` (par défaut `#10b981`)
+
+Exemples d'utilisation dans vos composants :
+
+```html
+<button class="bg-primary text-white px-4 py-2 rounded">Action principale</button>
+<span class="text-secondary">Texte secondaire</span>
+<div class="bg-success text-white px-3 py-1 rounded">Succès</div>
+```
+
+Pour modifier les valeurs, éditez `tailwind.config.cjs` à la racine et relancez le serveur de dev.

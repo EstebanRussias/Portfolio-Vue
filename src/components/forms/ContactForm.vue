@@ -1,23 +1,23 @@
 <template>
-  <form @submit.prevent="submit" class="contact-form" id="contact" novalidate>
+  <form @submit.prevent="submit" class="grid gap-2 max-w-xl" id="contact" novalidate>
     <div>
-      <label>Nom</label>
-      <input v-model="form.name" required />
-      <small v-if="errors.name" class="err">{{ errors.name }}</small>
+      <label class="block font-semibold">Nom</label>
+      <input class="w-full p-2 border border-sky-100 rounded" v-model="form.name" required />
+      <small v-if="errors.name" class="text-red-600 text-sm">{{ errors.name }}</small>
     </div>
     <div>
-      <label>Email</label>
-      <input v-model="form.email" required type="email" />
-      <small v-if="errors.email" class="err">{{ errors.email }}</small>
+      <label class="block font-semibold">Email</label>
+      <input class="w-full p-2 border border-sky-100 rounded" v-model="form.email" required type="email" />
+      <small v-if="errors.email" class="text-red-600 text-sm">{{ errors.email }}</small>
     </div>
     <div>
-      <label>Message</label>
-      <textarea v-model="form.message" required></textarea>
-      <small v-if="errors.message" class="err">{{ errors.message }}</small>
+      <label class="block font-semibold">Message</label>
+      <textarea class="w-full p-2 border border-sky-100 rounded" v-model="form.message" required></textarea>
+      <small v-if="errors.message" class="text-red-600 text-sm">{{ errors.message }}</small>
     </div>
-    <div class="actions">
-      <button type="submit" class="btn">Envoyer</button>
-      <span v-if="success" class="success">Votre message a bien été envoyé (simulation).</span>
+    <div class="flex items-center gap-4">
+      <button type="submit" class="py-3 w-full bg-(--color-secondary) text-white rounded">Envoyer</button>
+      <span v-if="success" class="text-green-600 ml-2">Votre message a bien été envoyé (simulation).</span>
     </div>
   </form>
 </template>
@@ -47,11 +47,4 @@ function submit() {
 }
 </script>
 
-<style>
-.contact-form { display:grid; gap:0.6rem; max-width:620px; }
-.contact-form label { display:block; font-weight:600; }
-.contact-form input, .contact-form textarea { width:100%; padding:0.5rem; border:1px solid #dbeafe; border-radius:6px; }
-.err { color:#dc2626; font-size:0.85rem; }
-.success { color:#16a34a; margin-left:0.8rem; }
-.actions { display:flex; align-items:center; gap:1rem; }
-</style>
+<!-- styles removed: using Tailwind utilities -->

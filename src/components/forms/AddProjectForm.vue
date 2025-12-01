@@ -1,14 +1,32 @@
 <template>
-  <form @submit.prevent="onSubmit" class="add-project-form" novalidate>
-    <div><label>Titre</label><input v-model="form.title" required /></div>
-    <div><label>Image (URL)</label><input v-model="form.image" /></div>
-    <div><label>Github (URL)</label><input v-model="form.github" /></div>
-    <div><label>Année</label><input v-model.number="form.year" type="number" /></div>
-    <div><label>Tags (séparés par , )</label><input v-model="tagsRaw" /></div>
-    <div><label>Description</label><textarea v-model="form.description"></textarea></div>
-    <div class="actions">
-      <button class="btn" type="submit">Ajouter le projet</button>
-      <span v-if="msg" class="msg">{{ msg }}</span>
+  <form @submit.prevent="onSubmit" class="grid gap-2 max-w-2xl" novalidate>
+    <div>
+      <label class="block font-semibold">Titre</label>
+      <input class="w-full p-2 border border-(--color-secondary) rounded" v-model="form.title" required />
+    </div>
+    <div>
+      <label class="block font-semibold">Image (URL)</label>
+      <input class="w-full p-2 border border-(--color-secondary) rounded" v-model="form.image" />
+    </div>
+    <div>
+      <label class="block font-semibold">Github (URL)</label>
+      <input class="w-full p-2 border border-(--color-secondary) rounded" v-model="form.github" />
+    </div>
+    <div>
+      <label class="block font-semibold">Année</label>
+      <input class="w-full p-2 border border-(--color-secondary) rounded" v-model.number="form.year" type="number" />
+    </div>
+    <div>
+      <label class="block font-semibold">Tags (séparés par , )</label>
+      <input class="w-full p-2 border border-(--color-secondary) rounded" v-model="tagsRaw" />
+    </div>
+    <div>
+      <label class="block font-semibold">Description</label>
+      <textarea class="w-full p-2 border border-(--color-secondary) rounded" v-model="form.description"></textarea>
+    </div>
+    <div class="flex items-center gap-4 mt-2">
+      <button class="px-4 py-2 bg-(--color-secondary) w-full text-white rounded" type="submit">Ajouter le projet</button>
+      <span v-if="msg" class="text-(--color-success)">{{ msg }}</span>
     </div>
   </form>
 </template>
@@ -37,8 +55,4 @@ function onSubmit() {
 }
 </script>
 
-<style>
-.add-project-form { display:grid; gap:0.5rem; max-width:700px; }
-.add-project-form .actions { display:flex; align-items:center; gap:1rem; margin-top:0.5rem;}
-.msg { color:#06b6d4; }
-</style>
+<!-- styles removed: using Tailwind utilities -->
