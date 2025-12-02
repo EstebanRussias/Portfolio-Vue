@@ -2,27 +2,27 @@
   "projects": [
     {
       "id": 1,
-      "title": "Portfolio V1",
-      "description": "Site portfolio construit en HTML/CSS/JS.",
-      "image": "https://picsum.photos/seed/portfolio1/800/450",
+      "title": "Création de Node.js",
+      "description": "JavaScript avait juste besoin d’un mec pour envahir les serveurs",
+      "image": "https://picsum.photos/id/16/800/450",
       "github": "https://github.com/EstebanRussias/portfolio-v1",
       "year": 2024,
-      "tags": ["HTML","CSS","JS"]
+      "tags": ["Node","JavaScript"]
     },
     {
       "id": 2,
       "title": "Todo App",
-      "description": "Petite application de gestion de tâches avec stockage local.",
-      "image": "https://picsum.photos/seed/todo/800/450",
+      "description": "Gestionaires de tâches afin de ne pas oublier le PQ.",
+      "image": "https://picsum.photos/id/8/800/450",
       "github": "https://github.com/EstebanRussias/todo-app",
       "year": 2025,
-      "tags": ["JavaScript","LocalStorage"]
+      "tags": ["HTML","JavaScript","LocalStorage"]
     },
     {
       "id": 3,
       "title": "API Weather",
-      "description": "Consommation d'API météo et affichage dynamique.",
-      "image": "https://picsum.photos/seed/weather/800/450",
+      "description": "Météo et affichage dynamique.",
+      "image": "https://picsum.photos/id/57/800/450",
       "github": "https://github.com/EstebanRussias/weather-api-client",
       "year": 2023,
       "tags": ["API","Fetch"]
@@ -40,7 +40,7 @@
       "id": 5,
       "title": "Chat Simple",
       "description": "Chat temps réel basique (WebSocket mock).",
-      "image": "https://picsum.photos/seed/chat/800/450",
+      "image": "https://picsum.photos/id/38/800/450",
       "github": "https://github.com/EstebanRussias/simple-chat",
       "year": 2022,
       "tags": ["WebSocket","Realtime"]

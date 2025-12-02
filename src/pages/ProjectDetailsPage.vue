@@ -1,6 +1,10 @@
 <template>
-  <div v-if="project" class="w-[80vw] mx-auto py-8">
-    <router-link to="/projects" class="inline-block bg-(--color-secondary) rounded-full px-4 py-3 my-4"><-</router-link>
+  <div v-if="project" class="w-[80vw] min-h-[80vh] mx-auto py-8">
+    <router-link to="/projects" class="inline-block bg-(--color-secondary) rounded-full px-4 py-3 my-4">
+      <svg class="inline-block w-6 h-6 sm:w-7 sm:h-7 md:w-6 md:h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M15 19l-7-7 7-7" />
+      </svg>
+    </router-link>
     <div class="mb-4">
       <h1 class="text-2xl font-bold text-(--color-secondary)"><span>
         {{ project.title }}

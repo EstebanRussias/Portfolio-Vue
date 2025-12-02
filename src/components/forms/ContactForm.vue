@@ -2,17 +2,17 @@
   <form @submit.prevent="submit" class="grid gap-2 max-w-xl" id="contact" novalidate>
     <div>
       <label class="block font-semibold">Nom</label>
-      <input class="w-full p-2 border border-sky-100 rounded" v-model="form.name" required />
+      <input class="w-full p-2 border border-(--text-color) rounded" v-model="form.name" required />
       <small v-if="errors.name" class="text-red-600 text-sm">{{ errors.name }}</small>
     </div>
     <div>
       <label class="block font-semibold">Email</label>
-      <input class="w-full p-2 border border-sky-100 rounded" v-model="form.email" required type="email" />
+      <input class="w-full p-2 border border-(--text-color) rounded" v-model="form.email" required type="email" />
       <small v-if="errors.email" class="text-red-600 text-sm">{{ errors.email }}</small>
     </div>
     <div>
       <label class="block font-semibold">Message</label>
-      <textarea class="w-full p-2 border border-sky-100 rounded" v-model="form.message" required></textarea>
+      <textarea class="w-full p-2 border border-(--text-color) rounded" v-model="form.message" required></textarea>
       <small v-if="errors.message" class="text-red-600 text-sm">{{ errors.message }}</small>
     </div>
     <div class="flex items-center gap-4">

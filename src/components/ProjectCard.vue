@@ -13,6 +13,8 @@
 
 <script setup>
 defineProps({ project: { type: Object, required: true } })
+
+
 </script>
 
 <!-- styles removed: using Tailwind utilities -->

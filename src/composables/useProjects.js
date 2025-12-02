@@ -1,7 +1,8 @@
 import { ref, computed } from 'vue'
-import rawData from '../data.json' // Vite/webpack autorise import JSON
+import rawData from '../data.json'
 
-const projects = ref([...rawData.projects]) // initial load
+const projects = ref([...rawData.projects])
+
 let nextId = projects.value.length ? Math.max(...projects.value.map(p=>p.id)) + 1 : 1
 
 export function useProjects() {
@@ -17,7 +18,7 @@ export function useProjects() {
       year: payload.year || new Date().getFullYear(),
       tags: payload.tags || []
     }
-    projects.value.unshift(newProject) // ajout en tête
+    projects.value.unshift(newProject) 
     return newProject
   }
 
@@ -26,7 +27,6 @@ export function useProjects() {
   }
 
   function listSummary() {
-    // retourner sans description (par ex. pour /projects)
     return projects.value.map(({id, title, image, github, year, tags}) => ({id, title, image, github, year, tags}))
   }
 
